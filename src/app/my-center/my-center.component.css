@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap");
+
+
+* {
+  font-family: "Saira Semi Condensed", sans-serif;
+  transition: all 0.5s ease;
+}
+
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 0 16px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 400px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px  ;
+}
+form div, form label, form input, form textarea {
+  width: 100%;
+}
+
+.field:nth-of-type(2) {
+  margin: 16px 0;
+}
+
+label, input, textarea {
+  padding: 8px;
+}
+
+label, [placeholder] {
+  color: #555;
+}
+
+label i {
+  margin: 0 10px 0 0;
+}
+
+.field:focus-within label {
+  color: #000;
+  letter-spacing: 2px;
+}
+
+input, textarea {
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 8px 6px -6px #555;
+}
+input:focus, textarea:focus {
+  background: white;
+  box-shadow: none;
+}
+
+textarea {
+  resize: none;
+}
+textarea::-webkit-scrollbar {
+  width: 0;
+}
+
+button {
+  background: #ffe214;
+  margin: 16px 0 50px 0;
+  padding: 8px 16px;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 8px 6px -6px #555;
+}
+button:hover {
+  letter-spacing: 2px;
+  box-shadow: none;
+}
+
+body{
+  background: -moz-linear-gradient(#fff, #f8b500); /* FF3.6+ */
+  background: -webkit-linear-gradient(#fff,#f8b500); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(#fff,#f8b500); /* Opera11.10+ */
+  background: -ms-linear-gradient(#fff,#f8b500); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#f8b500',GradientType=0 ); /* IE6-9 */
+  background: linear-gradient(#fff,#f8b500); /* W3C */
+}
