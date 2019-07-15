@@ -84,7 +84,7 @@ button:hover {
 }
 
 body {
-  height: 604px;
+  height: 538px;
   color: #fff;
   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
   background-size: 400% 400%;
@@ -128,3 +128,4 @@ body {
     background-position: 0% 50%
   }
 }
+
