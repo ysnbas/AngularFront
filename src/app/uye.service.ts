@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class UyeService {
 
-  public url = 'http://localhost:8080/uye';
+  public url = 'http://localhost:8080/home';
 
   constructor(public http: HttpClient) {
   }

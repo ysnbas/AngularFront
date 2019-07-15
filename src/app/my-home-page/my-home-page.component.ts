@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UyeService} from '../uye.service';
 
 @Component({
   selector: 'app-my-home-page',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-home-page.component.css']
 })
 export class MyHomePageComponent implements OnInit {
+  public uyeList: any;
 
-  constructor() { }
+  constructor(private uyeService: UyeService) {
+  }
 
   ngOnInit() {
+    this.uyeService.getAllUye()
+      .subscribe(data => {
+        this.uyeList = data;
+      });
   }
 
 }
