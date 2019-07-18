@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {LoginService} from '../login.service';
 
 @Component({
   selector: 'app-login',
@@ -8,18 +9,25 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router) {
+  // tslint:disable-next-line:no-shadowed-variable
+  constructor(private router: Router, private LoginService: LoginService) {
   }
 
   ngOnInit() {
   }
 
-  log() {
-    this.router.navigate(['home']);
+  try(formValue) {
+    console.log('Try Login : ' + formValue.email);
 
+    this.LoginService.try(formValue.email, formValue.password)
+      .subscribe(response => {
+        console.log('Try Login Response ');
+
+      });
   }
 
   git() {
-    this.router.navigate(['kayıt']);
+    this.router.navigate(['kayit']);
   }
+
 }

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-
+import {UyeService} from '../uye.service';
 
 @Component({
   selector: 'app-my-center',
@@ -9,15 +9,29 @@ import {Router} from '@angular/router';
 })
 export class MyCenterComponent implements OnInit {
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private uyeService: UyeService) {
   }
+
+  public uyeList: any;
 
   ngOnInit() {
   }
 
-  giris() {
-    this.router.navigate(['home']);
 
+  onClickSubmit(formData) {
+    const serviceReqObj = {
+      name: formData.name,
+      surname: formData.surname,
+      email: formData.email,
+      password: formData.password
+    };
+
+    this.uyeService.postPerson(serviceReqObj)
+      .subscribe(postResponse => {
+          this.uyeList = postResponse;
+        }
+      );
+
+    this.router.navigate(['signin']);
   }
-
 }
