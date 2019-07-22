@@ -20,7 +20,7 @@ export class MyCenterComponent implements OnInit {
 
   onClickSubmit(formData) {
     const serviceReqObj = {
-      name: formData.name,
+      username: formData.name,
       surname: formData.surname,
       email: formData.email,
       password: formData.password
